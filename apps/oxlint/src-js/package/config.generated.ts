@@ -1579,6 +1579,7 @@ export interface DummyRuleMap {
   "unicorn/no-length-as-slice-end"?: RuleNoConfig;
   "unicorn/no-lonely-if"?: RuleNoConfig;
   "unicorn/no-magic-array-flat-depth"?: RuleNoConfig;
+  "unicorn/no-negated-array-predicate"?: RuleNoConfig;
   "unicorn/no-negated-condition"?: RuleNoConfig;
   "unicorn/no-negation-in-equality-check"?: RuleNoConfig;
   "unicorn/no-nested-ternary"?: RuleNoConfig;

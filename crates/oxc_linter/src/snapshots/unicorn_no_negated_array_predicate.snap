@@ -1,0 +1,80 @@
+---
+source: crates/oxc_linter/src/tester.rs
+---
+
+  ⚠ unicorn(no-negated-array-predicate): Prefer `Array#some()` with a negated predicate over negating `Array#every()`.
+   ╭─[no_negated_array_predicate.tsx:1:8]
+ 1 │ !array.every(x => x.ok)
+   ·        ─────
+   ╰────
+  help: Replace `!array.every(x => …)` with `array.some(x => !…)`.
+
+  ⚠ unicorn(no-negated-array-predicate): Prefer `Array#every()` with a negated predicate over negating `Array#some()`.
+   ╭─[no_negated_array_predicate.tsx:1:8]
+ 1 │ !array.some(x => x.ok)
+   ·        ────
+   ╰────
+  help: Replace `!array.some(x => …)` with `array.every(x => !…)`.
+
+  ⚠ unicorn(no-negated-array-predicate): Prefer `Array#some()` with a negated predicate over negating `Array#every()`.
+   ╭─[no_negated_array_predicate.tsx:1:8]
+ 1 │ !array.every(function (x) { return x.ok; })
+   ·        ─────
+   ╰────
+  help: Replace `!array.every(x => …)` with `array.some(x => !…)`.
+
+  ⚠ unicorn(no-negated-array-predicate): Prefer `Array#some()` with a negated predicate over negating `Array#every()`.
+   ╭─[no_negated_array_predicate.tsx:1:8]
+ 1 │ !array.every(x => { return x.ok; })
+   ·        ─────
+   ╰────
+  help: Replace `!array.every(x => …)` with `array.some(x => !…)`.
+
+  ⚠ unicorn(no-negated-array-predicate): Prefer `Array#every()` with a negated predicate over negating `Array#some()`.
+   ╭─[no_negated_array_predicate.tsx:1:8]
+ 1 │ !array.some(x => x, thisArg)
+   ·        ────
+   ╰────
+  help: Replace `!array.some(x => …)` with `array.every(x => !…)`.
+
+  ⚠ unicorn(no-negated-array-predicate): Prefer `Array#every()` with a negated predicate over negating `Array#some()`.
+   ╭─[no_negated_array_predicate.tsx:1:9]
+ 1 │ !(array.some(x => x))
+   ·         ────
+   ╰────
+  help: Replace `!array.some(x => …)` with `array.every(x => !…)`.
+
+  ⚠ unicorn(no-negated-array-predicate): Prefer `Array#every()` with a negated predicate over negating `Array#some()`.
+   ╭─[no_negated_array_predicate.tsx:1:8]
+ 1 │ !array.some(x => x)!
+   ·        ────
+   ╰────
+  help: Replace `!array.some(x => …)` with `array.every(x => !…)`.
+
+  ⚠ unicorn(no-negated-array-predicate): Prefer `Array#some()` with a negated predicate over negating `Array#every()`.
+   ╭─[no_negated_array_predicate.tsx:1:10]
+ 1 │ !foo.bar.every(x => !x)
+   ·          ─────
+   ╰────
+  help: Replace `!array.every(x => …)` with `array.some(x => !…)`.
+
+  ⚠ unicorn(no-negated-array-predicate): Prefer `Array#some()` with a negated predicate over negating `Array#every()`.
+   ╭─[no_negated_array_predicate.tsx:1:12]
+ 1 │ if (!array.every(x => x > 0)) {}
+   ·            ─────
+   ╰────
+  help: Replace `!array.every(x => …)` with `array.some(x => !…)`.
+
+  ⚠ unicorn(no-negated-array-predicate): Prefer `Array#some()` with a negated predicate over negating `Array#every()`.
+   ╭─[no_negated_array_predicate.tsx:1:20]
+ 1 │ let foo = {}; !foo.every(x => x)
+   ·                    ─────
+   ╰────
+  help: Replace `!array.every(x => …)` with `array.some(x => !…)`.
+
+  ⚠ unicorn(no-negated-array-predicate): Prefer `Array#every()` with a negated predicate over negating `Array#some()`.
+   ╭─[no_negated_array_predicate.tsx:1:15]
+ 1 │ !new Array(3).some(x => x)
+   ·               ────
+   ╰────
+  help: Replace `!array.some(x => …)` with `array.every(x => !…)`.
